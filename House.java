@@ -40,6 +40,20 @@ public class House extends Building {
     return this.residents.size();
   }
 
+  public void moveIn(String name) {
+
+  }
+
+  public String moveOut(String name) {
+
+  }
+
+  public Boolean isAResident(String name) {
+    if (residents.contains(name)) {
+      
+    }
+  } 
+
 
   public static void main(String[] args) {
     new House();
