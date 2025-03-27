@@ -24,7 +24,7 @@ public class House extends Building {
 
 /**
  * accesses boolean value of the hasDiningRoom attribute
- * @return boolean value
+ * @return true or false depending on if house has a dining room
  */
   public boolean hasDiningRoom() {
     return this.hasDiningRoom;
