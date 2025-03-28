@@ -1,10 +1,10 @@
 import java.util.ArrayList;
 
 /* This is a stub for the House class */
-public class House extends Building {
+public class House extends Building implements HouseRequirements{
 
   // Attributes 
-  private ArrayList <String> residents;
+  private ArrayList <Student> residents;
   private boolean hasDiningRoom;
 
 
@@ -17,7 +17,7 @@ public class House extends Building {
    */
   public House(String name, String address, int nFloors, boolean hasDiningRoom) { // still passing in boolean, but it won't be used in super
     super(name, address, nFloors); // creates a house using the Building class, must use same parameters as Building constructor
-    this.residents = new ArrayList<String>(); // <String> indicates what kind of data will be stored in ArrayList
+    this.residents = new ArrayList<Student>(); // <String> indicates what kind of data will be stored in ArrayList
     this.hasDiningRoom = hasDiningRoom;
 
     System.out.println("You have built a house: 🏠");
@@ -42,37 +42,37 @@ public class House extends Building {
 
 
   /**
-   * checks if person is already a resident and updates the "residents" arraylist everytime someone moves in
+   * checks if student is already a resident and updates the "residents" arraylist everytime someone moves in
    * @param name
    */
-  public void moveIn(String name) {
-    if (!residents.contains(name)) {
-      residents.add(name);
+  public void moveIn(Student s) {
+    if (!residents.contains(s)) {
+      residents.add(s);
     } 
 
   }
 
 
   /**
-   * checks if person is a resident and updates the "residents" arraylist everytime someone moves out
+   * checks if student is a resident and updates the "residents" arraylist everytime someone moves out
    * @param name
-   * @return name of person who moved out
+   * @return s
    */
-  public String moveOut(String name) {
-    if (residents.contains(name)) {
-      residents.remove(name);
-    } return name;
+  public Student moveOut(Student s) {
+    if (residents.contains(s)) {
+      residents.remove(s);
+    } return s;
 
   }
 
 
   /**
-   * checks if a given person is a resident of the "House"
+   * checks if a given student is a resident of the "House"
    * @param person
-   * @return true or false depending on if the person is a resident
+   * @return true or false depending on if the student is a resident
    */
-  public Boolean isResident(String person) {
-    if (residents.contains(person)) {
+  public boolean isResident(Student s) {
+    if (residents.contains(s)) {
       return true;
     } else {
       return false;
