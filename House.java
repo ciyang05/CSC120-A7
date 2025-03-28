@@ -42,23 +42,26 @@ public class House extends Building {
 
 
   /**
-   * updates the "residents" arraylist everytime someone moves in
+   * checks if person is already a resident and updates the "residents" arraylist everytime someone moves in
    * @param name
    */
   public void moveIn(String name) {
-    residents.add(name); // Do I have to include this in front of residents?
+    if (!residents.contains(name)) {
+      residents.add(name);
+    } 
 
   }
 
 
   /**
-   * updates the "residents" arraylist everytime someone moves out
+   * checks if person is a resident and updates the "residents" arraylist everytime someone moves out
    * @param name
    * @return name of person who moved out
    */
   public String moveOut(String name) {
-    residents.remove(name);
-    return name;
+    if (residents.contains(name)) {
+      residents.remove(name);
+    } return name;
 
   }
 
