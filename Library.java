@@ -25,6 +25,7 @@ public Library(String name, String address, int nFloors ) {
       // myLibrary.checkOut("Harry Potter");
       // myLibrary.isAvailable("Harry Potter");
       // myLibrary.printCollection();
+      myLibrary.containsTitle("Harry Potter");
     }
     
     @Override
