@@ -21,12 +21,16 @@ public Library(String name, String address, int nFloors ) {
      */
     public static void main(String[] args) {
       Library myLibrary = new Library("Kiara's library", "123 St", 3);
+      // myLibrary.addTitle("Harry Potter");
+      // myLibrary.checkOut("Harry Potter");
+      // myLibrary.isAvailable("Harry Potter");
+      // myLibrary.printCollection();
     }
     
     @Override
     public void addTitle(String title) {
       collection.put(title, true);
-      System.out.println(title + "has been added to the library collection");
+      System.out.println(title + " " + "has been added to the library collection");
     }
     /**
      * adds specific title to the collection hashtable 
