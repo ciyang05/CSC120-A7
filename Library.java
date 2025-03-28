@@ -21,11 +21,12 @@ public Library(String name, String address, int nFloors ) {
      */
     public static void main(String[] args) {
       Library myLibrary = new Library("Kiara's library", "123 St", 3);
+      System.out.println(myLibrary);
       // myLibrary.addTitle("Harry Potter");
       // myLibrary.checkOut("Harry Potter");
       // myLibrary.isAvailable("Harry Potter");
       // myLibrary.printCollection();
-      myLibrary.containsTitle("Harry Potter");
+      //myLibrary.containsTitle("Harry Potter");
     }
     
     @Override
