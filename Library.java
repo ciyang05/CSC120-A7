@@ -98,11 +98,19 @@ public Library(String name, String address, int nFloors ) {
         return false;
       }
     }
-  
+    /**
+     * Prints out the hashtable and checks if it is null 
+     * @return true or false depending on if the hashtable is null and empty or not
+     */
     @Override
     public boolean printCollection() {
-     System.out.println(collection.toString());
-     return true;
+      if (collection == null  || collection.isEmpty()){
+        return false;
+      } else {
+        System.out.println(collection.toString());
+        return true;
+      }
+      
     }
   
   }
