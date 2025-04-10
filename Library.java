@@ -32,7 +32,6 @@ public Library(String name, String address, int nFloors ) {
      * adds specific title to the collection hashtable 
      * @param title of book being added
      */
-    @Override
     public void addTitle(String title) {
       collection.put(title, true);
       System.out.println(title + " " + "has been added to the library collection");
@@ -42,7 +41,6 @@ public Library(String name, String address, int nFloors ) {
      * @param title of book being removed
      * @return title of the book removed from the collection
      */
-    @Override
     public String removeTitle(String title) {
       collection.remove(title);
       return title;
@@ -52,7 +50,6 @@ public Library(String name, String address, int nFloors ) {
      * if title is contained within the collection, this function makes the value false to checkout
      * @param title of book to checkout
      */
-    @Override
     public void checkOut(String title) {
     if (collection.containsKey(title)){
       collection.replace(title, false);
@@ -64,7 +61,6 @@ public Library(String name, String address, int nFloors ) {
      * returns book back into collection by changing value to true
      * @param title of book to return
      */
-    @Override
     public void returnBook(String title) {
     if (collection.containsKey(title)) {
       collection.replace(title, true);
@@ -77,7 +73,6 @@ public Library(String name, String address, int nFloors ) {
      * @param title of book
      * @return true or false depending on if the collection contains the title
      */
-    @Override
     public boolean containsTitle(String title) {
       if (collection.containsKey(title)) {
         return true;  
@@ -90,7 +85,6 @@ public Library(String name, String address, int nFloors ) {
      * @param title of the boock
      * @return true or false depending on whether the title is available in the collection
      */
-    @Override
     public boolean isAvailable(String title) {
       if (collection.containsKey(title)){
         return collection.get(title) ;
@@ -102,7 +96,6 @@ public Library(String name, String address, int nFloors ) {
      * Prints out the hashtable and checks if it is null 
      * @return true or false depending on if the hashtable is null and empty or not
      */
-    @Override
     public boolean printCollection() {
       if (collection == null  || collection.isEmpty()){
         return false;

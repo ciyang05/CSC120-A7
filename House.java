@@ -43,7 +43,7 @@ public class House extends Building implements HouseRequirements{
 
   /**
    * checks if student is already a resident and updates the "residents" arraylist everytime someone moves in
-   * @param name
+   * @param s
    */
   public void moveIn(Student s) {
     if (!residents.contains(s)) {
@@ -55,7 +55,7 @@ public class House extends Building implements HouseRequirements{
 
   /**
    * checks if student is a resident and updates the "residents" arraylist everytime someone moves out
-   * @param name
+   * @param s
    * @return s
    */
   public Student moveOut(Student s) {
@@ -68,7 +68,7 @@ public class House extends Building implements HouseRequirements{
 
   /**
    * checks if a given student is a resident of the "House"
-   * @param person
+   * @param s
    * @return true or false depending on if the student is a resident
    */
   public boolean isResident(Student s) {
